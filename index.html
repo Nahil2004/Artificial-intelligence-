@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unsloth Clone & Image Gallery</title>
+    <style>
+        /* Global Styling */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        body {
+            text-align: center;
+            background: #f4f4f4;
+        }
+
+        /* Navbar */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+            background: #333;
+            color: white;
+        }
+        nav .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+        }
+        nav ul li {
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(to right, #1a1a1a, #333);
+            color: white;
+            padding: 80px 20px;
+        }
+        .hero h1 {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+        .hero p {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+        .hero button {
+            padding: 10px 20px;
+            font-size: 18px;
+            background: orange;
+            border: none;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .hero button:hover {
+            background: darkorange;
+        }
+
+        /* Image Gallery */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+        .image-box {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+        }
+        .image-box img {
+            width: 100%;
+            transition: transform 0.3s ease-in-out, filter 0.3s;
+            border-radius: 10px;
+        }
+        .image-box:hover img {
+            transform: scale(1.1);
+            filter: brightness(80%);
+        }
+
+        /* Caption Animation */
+        .caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 10px;
+            text-align: center;
+            transform: translateY(100%);
+            transition: transform 0.3s ease-in-out;
+        }
+        .image-box:hover .caption {
+            transform: translateY(0);
+        }
+
+        /* Footer */
+        footer {
+            padding: 15px;
+            background: #333;
+            color: white;
+            margin-top: 20px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">Unsloth Clone</div>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Features</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Welcome to Unsloth Clone</h1>
+        <p>AI-Powered Innovations</p>
+        <button>Get Started</button>
+    </section>
+
+    <!-- Image Gallery -->
+    <div class="gallery">
+        <div class="image-box">
+            <img src="https://source.unsplash.com/random/300x300?nature" alt="Image 1">
+            <div class="caption">Nature Image</div>
+        </div>
+        <div class="image-box">
+            <img src="https://source.unsplash.com/random/300x300?city" alt="Image 2">
+            <div class="caption">City Image</div>
+        </div>
+        <div class="image-box">
+            <img src="https://source.unsplash.com/random/300x300?tech" alt="Image 3">
+            <div class="caption">Technology Image</div>
+        </div>
+        <div class="image-box">
+            <img src="https://source.unsplash.com/random/300x300?ocean" alt="Image 4">
+            <div class="caption">Ocean Image</div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 Unsloth Clone. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
